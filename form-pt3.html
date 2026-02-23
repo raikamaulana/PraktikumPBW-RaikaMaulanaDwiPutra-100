@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form | PBW Pertemuan 3</title>
+</head>
+<body>
+    <form method="GET" enctype="multipart/form-data" style="height: 100vh; display: flex; justify-content: center; align-items: center;" onsubmit="alert('Data Berhasil Dikirim')">
+        <table border="1" cellpadding="15">
+            <tr> 
+                <td>
+                    <table cellpadding="5">
+                        <h1 align="center">REGISTRASI MAHASISWA</h1>
+                        <tr>
+                            <td>Nama</td>
+                            <td>:</td>
+                            <td>
+                                <input type="text" name="nama" placeholder="Masukkan nama..." required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>:</td>
+                            <td>
+                                <input type="email" name="email" placeholder="Masukkan email..." required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Alamat</td>
+                            <td>:</td>
+                            <td>
+                                <textarea name="deskripsi" style="resize: none" rows="10" cols="30" aria-owns="" required></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Jenis Kelamin</td>
+                            <td>:</td>
+                            <td>
+                                <input type="radio" id="pria" name="jeniskelamin" value="pria">
+                                <label for="pria">Laki-laki</label>
+                                <input type="radio" id="wanita" name="jeniskelamin" value="wanita">
+                                <label for="wanita">Perempuan</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Hobi</td>
+                            <td>:</td>
+                            <td>
+                                <input type="checkbox" id="musik" name="hobi" value="musik"> 
+                                <label for="musik">Musik</label>
+                                <input type="checkbox" id="olahraga" name="hobi" value="olahraga">
+                                <label for="olahraga">Olahraga</label>
+                                <input type="checkbox" id="membaca" name="hobi" value="membaca">
+                                <label for="membaca">Mmebaca</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pilih Kota</td>
+                            <td>:</td>
+                            <td>
+                                <select name="gender" id="gender" required>
+                                    <option value="jakarta" selected>Jakarta</option>
+                                    <option value="bandung">Bandung</option>
+                                    <option value="surabaya">Surabaya</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Upload Foto</td>
+                            <td>:</td>
+                            <td>
+                                <input type="file" accept="image/*" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="submit">Kirim</button>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
