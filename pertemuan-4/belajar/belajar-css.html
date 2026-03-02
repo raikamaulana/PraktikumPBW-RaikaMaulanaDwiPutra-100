@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar CSS</title>
+    <!-- Contoh penggunaan CSS dengan external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Contoh penggunaan CSS dengan internal style */
+        h1 {
+            font-style: italic;
+        }
+
+        /* CSS: Box Model */
+        p#satu {
+            padding: 20px 5px 20px 5px;
+            border: 1px solid black;
+            margin: 10px;
+            text-align: justify;
+        }
+        p#css {
+            background-color: lightgray;
+            padding: 20px 5px 20px 5px;
+            border: 1px solid black;
+            margin: 20px;
+        }
+
+        /* CSS: Positioning */
+        .static {
+            position: static;
+            background-color: lightgreen;
+            width: 200px;
+            padding: 10px;
+            border: 1px solid black;
+            transition: all 1s ease;
+        }
+        .static:hover {
+            background-color: black;
+            cursor: pointer;
+            
+        }
+        .relative {
+            position: relative;
+            top: 30px;
+            right: 20px;
+            background-color: blueviolet;
+            width: 200px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+        .absolute {
+            position: absolute;
+            background-color: crimson;
+            width: 200px;
+            padding: 10px;
+            top: 10px;
+
+            border: 1px solid black;
+        }
+        .absolute-2 {
+            position: absolute;
+            background-color: crimson;
+            width: 200px;
+            padding: 10px;
+            top: 30px;
+            left: 30px;
+            border: 1px solid black;
+        }
+        .fixed {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background-color: lightcoral;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body style="height: 1500px;;">
+    <!-- Contoh penggunaan CSS dengan inline style -->
+    <h1 style="color: blue;">Apa itu CSS?</h1>
+    <p id="satu" style="background-color: aquamarine;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis tempore tenetur hic tempora ut accusantium laboriosam, sapiente necessitatibus similique est repellat dolorum? Nemo harum tenetur, sed reiciendis in cum deserunt?
+    </p>
+    
+    <!-- CSS: Box Model -->
+    <p id="css" style="font-style: oblique;">Cara penggunaan CSS adalah ...</p>
+
+    <!-- CSS: Positioning -->
+    <div class="static" id="">
+        contoh dari positioning static
+    </div>
+
+    <div class="relative">
+        contoh dari positioning relative
+        <div class="absolute-2">
+            contoh dari positioning absolute
+        </div>
+    </div>
+
+    <div class="absolute">
+        contoh dari positioning absolute
+    </div>
+
+    <div class="fixed">
+        contoh dari positioning fixed
+    </div>
+</body>
+</html>

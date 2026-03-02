@@ -1,0 +1,14 @@
+@media (max-width: 1048px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .content {
+        flex: 1;
+        margin-bottom: 20px;
+    }
+
+    .sidebar {
+        margin-left: 0;
+    }
+}

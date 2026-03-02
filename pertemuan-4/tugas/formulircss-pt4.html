@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singaperbangsa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di Pendaftaran Member</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">Beranda</a>
+            </li>
+            <li>
+                <a href="#tentang">Tentang</a>
+            </li>
+            <li>
+                <a href="#layanan">Layanan</a>
+            </li>
+            <li>
+                <a href="#kontak">Kontak</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="content">
+            <h2>Formulir Pendaftaran</h2>
+            <p>Silahkan isi formulir di bawah ini untuk mendaftar.</p>
+
+            <!-- formulir -->
+            <form method="GET" enctype="multipart/form-data" onsubmit="alert('Data Berhasil Dikirim')">
+                <span class="input-group">
+                    <label for="nama">Nama Lengkap: </label>
+                    <input type="text" name="nama" placeholder="Masukkan nama..." required>
+                </span>
+                <span class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" placeholder="Masukkan email..." required>
+                </span>
+                <span class="input-group">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" placeholder="Masukkan password..." required>
+                </span>
+                <hr>
+                <span class="input-group">
+                    <label for="jenis-kelamin">Jenis Kelamin:</label>
+                    <span class="radio-group">
+                        <input type="radio" id="pria" name="jeniskelamin" value="pria">
+                        <label for="pria">Laki-laki</label>
+                    </span>
+                    <span class="radio-group">
+                        <input type="radio" id="wanita" name="jeniskelamin" value="wanita">
+                        <label for="wanita">Perempuan</label>
+                    </span>
+                </span>
+                <hr>
+                <span class="input-group">
+                    <label for="hobi">Hobi:</label>
+                    <span class="radio-group">
+                        <input type="checkbox" id="musik" name="hobi" value="musik"> 
+                        <label for="musik">Musik</label>
+                    </span>
+                    <span class="radio-group"> 
+                        <input type="checkbox" id="olahraga" name="hobi" value="olahraga">
+                        <label for="olahraga">Olahraga</label>
+                    </span>
+                    <span class="radio-group">
+                        <input type="checkbox" id="membaca" name="hobi" value="membaca">
+                        <label for="membaca">Membaca</label>
+                    </span>
+                </span>
+                <hr>
+                <span class="input-group">
+                    <label for="kota">Pilih Kota:</label>
+                    <select name="gender" id="gender" required>
+                        <option value="jakarta" selected>Jakarta</option>
+                        <option value="bandung">Bandung</option>
+                        <option value="surabaya">Surabaya</option>
+                    </select>
+                </span>
+                <hr>
+                <span class="input-group">
+                    <label for="pesan-tambahan">Pesan Tambahan:</label>
+                    <textarea name="deskripsi" style="resize: none" rows="10" cols="30" placeholder="Tulis pesan di sini..." required></textarea>
+                </span>
+                <button type="submit" class="btn">Kirim</button>
+            </form>
+        </section>
+
+        <aside class="sidebar">
+            <h2>Sidebar</h2>
+            <p>Bagian sidebar dapat berisi tautan, iklan, atau informasi tambahan.</p>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Halaman Web Singaperbangsa. Dibuat dengan CSS.</p>
+    </footer>
+
+</body>
+</html>

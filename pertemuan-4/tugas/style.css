@@ -1,0 +1,143 @@
+::-webkit-scrollbar{
+    display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #9c1328;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: #d73e3e;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration:none;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.content {
+    flex: 2;
+    padding: 20px;
+    background-color: #ECF0F1;
+    border-radius: 10px;
+}
+
+.sidebar {
+    flex: 1;
+    padding: 20px;
+    background-color: #BDC3C7;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2C3E50;
+    color: white;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2980B9;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #db343f;
+    transform: scale(1.012);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+form .input-group {
+    width: 100%;
+    margin-bottom: 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5px;
+}
+
+form span.radio-group {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+form span label {
+    font-weight: bold;
+}
+
+form span input[type="text"],
+form span input[type="email"],
+form span input[type="password"],
+form span textarea,
+form span select {
+    border: none;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+form span input[type="text"]::placeholder,
+form span input[type="email"]::placeholder,
+form span input[type="password"]::placeholder,
+form span textarea::placeholder,
+form span select::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+form span input[type="text"]:focus,
+form span input[type="email"]:focus,
+form span input[type="password"]:focus,
+form span textarea:focus,
+form span select:focus {
+    outline: 1px solid #ffffff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+hr {
+    border: none;
+    border-top: 1.5px solid #ccc;
+    margin-bottom: 10px;
+}
