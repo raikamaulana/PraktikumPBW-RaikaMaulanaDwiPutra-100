@@ -1,0 +1,203 @@
+:root {
+            --glass-bg: rgba(255, 255, 255, 0.2);
+            --glass-border: rgba(255, 255, 255, 0.3);
+            --primary-text: #ffffff;
+            --accent: #6366f1;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Supaya bola animasi tidak bikin scroll */
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            position: relative;
+        }
+
+        /* Animasi Background (Bola-bola Aestetik) */
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 1;
+        }
+
+        .circle-1 {
+            width: 300px;
+            height: 300px;
+            background: rgba(99, 102, 241, 0.4);
+            top: -50px;
+            left: 150px;
+            animation: floating 5s infinite alternate ease-in-out;
+        }
+
+        .circle-2 {
+            width: 400px;
+            height: 400px;
+            background: rgba(236, 72, 153, 0.3);
+            bottom: -100px;
+            right: 150px;
+            animation: floating2 5s infinite alternate ease-in-out;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(200px); }
+        }
+
+        @keyframes floating2 {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-200px); }
+        }
+
+        /* Container Glassmorphism */
+        .glass-card {
+            position: relative;
+            z-index: 10;
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px); /* Efek Buram Kaca */
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 40px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            color: var(--primary-text);
+        }
+
+        h1 {
+            font-size: 22px;
+            margin: 0 0 10px 0;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        p.subtitle {
+            text-align: center;
+            font-size: 14px;
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        input {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 12px 15px;
+            color: white;
+            font-size: 16px;
+            box-sizing: border-box;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--accent);
+            box-shadow: 0 0 15px rgba(99, 102, 241, 0.3);
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: 0.3s;
+            box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.4);
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            background: #4f46e5;
+        }
+
+        /* Tombol Group */
+        .button-group { display: flex; gap: 10px; margin-top: 20px; }
+
+        #btn-cek {
+            flex: 3;
+            padding: 14px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.4);
+        }
+
+        #btn-reset {
+            flex: 1;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            cursor: pointer;
+            color: var(--primary-text);
+            transition: 0.5s;
+        }
+
+        #btn-reset:hover { transform: rotate(180deg); }
+
+        /* Area Hasil */
+        #result-box {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 16px;
+            border: 2px dashed #e1e4e8;
+            text-align: center;
+            transition: all 0.5s ease;
+        }
+
+        .npm-title {
+            font-size: 11px; 
+            opacity: 0.6; 
+            letter-spacing: 1px; 
+            margin-bottom: 2px;
+        }
+
+        .npm-output {
+            font-size: 16px; 
+            font-weight: 600; 
+            margin-bottom: 15px; 
+            letter-spacing: 2px;
+        }
+
+        .huruf-mutu-title {
+            font-size: 11px; 
+            opacity: 0.6; 
+            letter-spacing: 1px;
+        }
+
+        .grade-text {
+            font-size: 48px;
+            font-weight: 800;
+            margin: 5px 0;
+            background: linear-gradient(to bottom, var(--primary-text), var(--glass-border));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar JavaScript</title>
+    
+</head>
+<body>
+    <h1 id="judul">Selamat Datang</h1>
+    <button onclick="ubahTeks()">Ubah Teks</button>
+    <button onclick="salam()">Ubah Teks</button>
+
+    <script>
+        function ubahTeks(){
+            document.getElementById("judul").innerHTML = "Teks telah berubah!";
+        }
+
+        function salam(){
+            document.getElementById("judul").innerHTML = "Selamat datang di website croTIn";
+        }
+
+        function contohLet(){
+            let y = 10;
+            if(true) {
+                let y = 20;
+                console.log("Nilai dalam blok:", y);
+            }
+            console.log("Nilai luar blok:", y)
+        }
+        contohLet();
+    </script>
+</body>
+</html>
