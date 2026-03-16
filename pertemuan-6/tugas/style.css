@@ -1,0 +1,221 @@
+:root {
+    --primary: #ff781f;
+    --primary-hover: #e66a1a;
+    --primary-light: #fff8f4;
+    --secondary: #2d3436;
+    --text-dark: #2d3436;
+    --text-muted: #636e72;
+    --white: #ffffff;
+    --gray-bg: #f0f2f5;
+    --border-color: #eee;
+}
+
+body {
+    margin: 0;
+    background: var(--gray-bg);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text-dark);
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    min-height: 100vh;
+    gap: 25px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+/* --- FORM SECTION --- */
+.form-section {
+    background: var(--white);
+    padding: 35px;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+}
+
+.header-kasir h1 {
+    font-size: 28px;
+    color: var(--primary);
+    margin: 0 0 8px 0;
+    font-weight: 800;
+}
+
+.header-kasir p {
+    color: var(--text-muted);
+    margin: 0;
+    font-size: 15px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin: 30px 0;
+}
+
+/* Radio Button */
+.product-card input[type="radio"] {
+    display: none;
+}
+
+.card-content {
+    border: 2px solid var(--border-color);
+    padding: 14px 15px;
+    border-radius: 18px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: var(--white);
+}
+
+/* Efek Hover & Checked */  
+
+.product-card input[type="radio"]:not(:checked) + .card-content:hover {
+    border-color: var(--primary-hover);
+    transform: translateY(-3px);
+}
+
+.product-card input[type="radio"]:checked + .card-content {
+    border-color: var(--primary);
+    background: var(--primary-light);
+    box-shadow: 0 8px 20px rgba(255, 120, 31, 0.15);
+    cursor: default;
+}
+
+.p-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--secondary);
+    display: block;
+    line-height: 1.4;
+}
+
+.p-price {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary);
+    display: block;
+}
+
+/* --- INPUT & BUTTON --- */
+.qty-section {
+    margin-bottom: 25px;
+}
+
+.qty-section label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.qty-section input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: inherit;
+    outline: none;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+.qty-section input:focus {
+    border-color: var(--primary);
+}
+
+.btn-beli {
+    width: 100%;
+    padding: 16px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 14px;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-beli:hover {
+    background: var(--primary-hover);
+}
+
+/* --- RECEIPT SECTION --- */
+.receipt-paper {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 24px;
+    border-top: 10px solid var(--primary);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 25px;
+}
+
+.receipt-paper h2 {
+    margin: 0 0 15px 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.receipt-details p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: var(--text-muted);
+    margin: 12px 0;
+}
+
+.receipt-details p strong, .receipt-details p span {
+    color: var(--text-dark);
+}
+
+.total-bayar {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--primary);
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px dashed var(--border-color);
+    text-align: right;
+}
+
+.btn-reset {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    background: none;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.btn-reset:hover {
+    background: #f8f9fa;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+    .main-container {
+        grid-template-columns: 1fr;
+    }
+    .receipt-paper {
+        position: static;
+    }
+}
+
+@media (max-width: 600px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
